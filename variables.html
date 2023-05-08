@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+        //Différentes manières d'écrire des numbers
+        const x = 3; //Variable finale ne changera jamais sinon envoie une erreur 
+        const y = 5.8;
+        let a = 5; //Variable locale 
+        a = 8;
+        var b = 50; // meme chose que let on peut aussi écrire que ' b = 50 ' signifie la mm chose que var mais à éviter d'utiliser
+        
+
+        //Différentes manières d'écrire des chaines de caractères
+        const abc = 'Hello world'; 
+        const def = "Aujourd'hui"; 
+        const ghi = `Comment ca va`; // Supporte les passages à la ligne pas besoin de \n Problème de performence -> plus long
+        const retour_ligne = "Bonjour\n cava ?";
+        const echappe_1 = 'Aujourd\'hui';
+        const echappe_2 = "On appelle ca la \"graille\" ";
+
+        //Concacténer des chaines de caractères 
+        const c = "Nouveau"
+        const d = " Mode"
+        const e = c+d;
+        const f = `${c} ${d}`;
+
+        //Boolean
+        const isTest = true; // false sinon
+        const nulle = null; // variable ne contient rien 
+        const param_not_defined = undefined; // indique que la variable n'est pas défini
+
+        //Tableau
+        tab = [20,1,8,119,'hi',[5,56,9]];       
+        let tab_2 = new Array(20,1,8,119,'hi',[5,56,9]); // Autre manière de définir un tableau
+                                                /* 
+                                                 * Accéder à une valeur comme suit : tab[index]
+                                                 * si il contient un tableau pour accéder à une valeur contenu dans 
+                                                 * ce tableau on fait comme suit : tab[index][index_2] 
+                                                 * -> index fait référence au tableau principale 
+                                                 * -> index_2 fait référence au tableau contenu dans le tableau principal
+                                                */
+        
+        //Objet 
+        /* Pour accéder aux informations contenus dans l'objet on fait people.nom 
+         * si j'ai un objet dans un objet on fait people.metier.type
+         * si j'ai un tableau dans un objet pour accéder à ses informations on fait personne.notes[index]
+        */
+        const cd = "Exemple"
+        const people = {
+            nom : 'Walid', 
+            prenom : 'Wawa', 
+            age : 22, 
+            notes : [12,10,20,1],
+            metier: {
+                nom : 'Développeur junior',
+                horaires : 35,
+                type: 'Stage'
+            },
+            [cd] : 300 //On utilise une clé basé sur une variable et ca nous renvoie -> Exemple : 300
+        };
+        const firstName = 'nom'; // on peut accéder directement à une information comme un tableau -> people['age'] = 22;
+                                 //on peut créer des clés qui ont le meme nom que ce qui est contenu dans l'objet pour y accéder -> people[firstName] ='Walid'
+        
+        /*
+         * Toutes les variables sont considérées comme des objets par défaut 
+         * Pour avoir le type d'une variable on utilise typeof object -> object fait référence à la variable
+         * un tableau est considéré comme un objet 
+        */
+       
+        //Opérations (c'est commutatif)
+        let op1 = 4+3; // 7 
+        let op2 = 0.1+0.2; // nombre flottant bizarre 0.30000000000000004 pour remédier au probleme l'arrondir
+        let op3 = 4+'3'; // '43'
+        let op4 = 3.4+'3'; // '3.43'
+        let op5 = 2*5; // 10
+        let op6 = 2*'6'; // 12
+        let op7 = 2*'a'; // NaN => not a number
+        let op8 = 2/3 // 0.666666666666666666
+        let op9 = 8%2 // 0
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
